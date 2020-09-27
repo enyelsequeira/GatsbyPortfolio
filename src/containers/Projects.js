@@ -5,7 +5,7 @@ import { projects } from "../utils/projectsData"
 
 const Projects = () => {
   return (
-    <Card>
+    <Card id="Projects">
       <Card.Wrapper>
         {projects.map(project => (
           <Card.GridContainer>

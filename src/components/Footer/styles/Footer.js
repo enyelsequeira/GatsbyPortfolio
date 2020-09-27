@@ -5,7 +5,9 @@ import { Link } from "gatsby"
 
 export const FooterSection = styled.section``
 
-export const Wrapper = styled(Grid)``
+export const Wrapper = styled(Grid)`
+  background: ${props => props.theme.colors.background2};
+`
 
 export const TopBar = styled(Grid)`
   text-align: center;
@@ -29,6 +31,9 @@ export const TopRight = styled(Grid)`
 export const Icon = styled(Img)`
   width: 80px;
   border-radius: 50%;
+  @media (min-width: 320px) and (max-width: 959px) {
+    margin: 2rem 0;
+  }
 `
 export const TitleCenter = styled.h1`
   color: ${props => props.theme.colors.primary1};
@@ -42,6 +47,9 @@ export const Button = styled(Link)`
   &:hover {
     box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
     color: ${props => props.theme.colors.accent1};
+  }
+  @media (min-width: 320px) and (max-width: 959px) {
+    margin: 2rem 0;
   }
 `
 export const BottomBar = styled(Container)``
@@ -64,6 +72,7 @@ export const Copyright = styled.p`
   text-align: center;
   font-size: 3rem;
   letter-spacing: 0.5rem;
+  margin: 3rem 0;
   @media (min-width: 320px) and (max-width: 500px) {
     font-size: 2rem;
   }

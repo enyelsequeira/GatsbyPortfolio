@@ -5,12 +5,19 @@ export const SocialSection = styled.section`
   width: 80%;
   padding: 1rem 2rem;
   height: 100%;
-  margin: 0 auto;
+  margin: 5rem auto;
+  background: ${props => props.theme.colors.background1};
+
   @media ${props => props.theme.breakpoints.mobile} {
     width: 100%;
+    margin: 2rem auto;
   }
   @media (min-width: 600px) and (max-width: 874px) {
     width: 100%;
+    margin: 2rem auto;
+  }
+  @media (min-width: 320px) and (max-width: 599px) {
+    margin: 2rem auto;
   }
 `
 

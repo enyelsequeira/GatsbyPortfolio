@@ -16,7 +16,7 @@ const AboutContainer = () => {
     }
   `)
   return (
-    <About>
+    <About id="About">
       <About.ContainerSection>
         <About.Wrapper>
           <About.LeftSection>

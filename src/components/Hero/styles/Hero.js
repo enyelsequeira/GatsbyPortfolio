@@ -6,6 +6,7 @@ export const HeroSection = styled.section`
   width: 80%;
   padding: 1rem 2rem;
   margin: 0 auto;
+  background: ${props => props.theme.colors.background1};
   @media ${props => props.theme.breakpoints.mobile} {
     width: 100%;
   }
@@ -62,8 +63,8 @@ export const Name = styled.h1`
   }
 `
 export const Picture = styled(Img)`
-  border: 1px solid red;
   border-radius: 40px;
   margin-top: 1rem;
   display: flex;
+  box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.75);
 `

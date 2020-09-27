@@ -8,6 +8,7 @@ export const AboutSection = styled.section`
 `
 export const ContainerSection = styled(Container)`
   ${"" /* border: 1px solid red; */}
+  background: ${props => props.theme.colors.background2};
 `
 
 export const Wrapper = styled(Grid)`
@@ -48,6 +49,9 @@ export const RightSection = styled(Grid)`
 export const Picture = styled(Img)`
   border: 1px solid red;
   width: 500px;
+  @media (min-width: 320px) and (max-width: 959px) {
+    margin-top: 2rem;
+  }
 `
 
 export const Title = styled.h2`
@@ -85,11 +89,9 @@ export const Button = styled(Link)`
   transition: 250ms;
   margin-top: 4rem;
 
-  &:hover,
-  &:focus {
-    &:hover {
-      box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
-      color: ${props => props.theme.colors.accent1};
-    }
+  &:hover {
+    box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
+    color: ${props => props.theme.colors.accent1};
+    cursor: pointer;
   }
 `
