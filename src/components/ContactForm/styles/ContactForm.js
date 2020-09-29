@@ -63,7 +63,7 @@ export const Contact1Form = styled.form`
 export const Contact1FormTitle = styled.span`
   display: block;
   font-size: 24px;
-  color: #333333;
+  color: ${props => props.theme.colors.primary1};
   line-height: 1.2;
   text-align: center;
   padding-bottom: 44px;

@@ -85,7 +85,7 @@ export const Info = styled.p`
   width: 100%;
   font-size: 1.9rem;
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 `
 
