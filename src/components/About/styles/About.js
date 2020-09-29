@@ -7,12 +7,10 @@ export const AboutSection = styled.section`
   margin-top: 5rem;
 `
 export const ContainerSection = styled(Container)`
-  ${"" /* border: 1px solid red; */}
   background: ${props => props.theme.colors.background2};
 `
 
 export const Wrapper = styled(Grid)`
-  ${"" /* height: 80vh; */}
   @media (min-width: 320px) and (max-width: 480px) {
     border: 1px solid green;
   }

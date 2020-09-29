@@ -6,7 +6,10 @@ import { Hero, About, Projects, Social } from "../containers"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO
+      title="Home"
+      description="Enyel personal site to showcase his latest works "
+    />
     <Hero />
     <About />
     <Projects />

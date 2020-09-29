@@ -36,7 +36,6 @@ export const GridContainer = styled(Grid)`
 export const TopPart = styled(Grid)``
 
 export const BottomPart = styled(Grid)`
-  ${"" /* border: 2px solid green; */}
   display: flex;
   align-self: center;
   align-items: center;
