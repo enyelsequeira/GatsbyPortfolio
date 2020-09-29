@@ -84,6 +84,7 @@ export const Button = styled(Link)`
   border: 0.1rem solid ${props => props.theme.colors.accent1};
   transition: 250ms;
   margin-top: 4rem;
+  margin-bottom: 1.2rem;
 
   &:hover {
     box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
