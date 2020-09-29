@@ -5,8 +5,6 @@ import {
   CardContent,
   CardActions,
   Divider,
-  CardMedia,
-  Container,
 } from "@material-ui/core"
 
 export const CardSection = styled.section`

@@ -7,12 +7,35 @@ export const projects = [
   {
     title: "Movie App",
     description:
-      "This App is a Reactjs application, using the latest technologies such as react hooks and scss modules to style. This App allows the user to check information about any movie. The movies are extracted from the TMDB API to display details, from trailer to general information. The user can also watch the preview and check the movies' official website if there's any, and they can also go directly to the IMDb to see information about the movie. This App is an update of a previous full-stack application; you can check out the old version when clicking more. ",
+      "This app is a ReactJs application, using the latest technologies, such as hooks, scss modules to style and the most important using AI, I've integrated AI to be able to ask a few simple question, from what does this app do? to others, you can check out the repo for more. The data being used in this app is from TMDB database and the user can see all the information related to each specific movie",
     image: MovieApp,
     tags: ["Mongo", "Express", "React", "Node"],
     source: "https://github.com/enyelsequeira/movieshook",
     visit: "https://newmovies.netlify.app/movie",
     id: 0,
+  },
+  {
+    title: "Around The World",
+    description:
+      "Vanilla Javascript Project, based only in using classes to manipulate the dom, manipulate the data being used. In this app the user can update information about himself, from name to profession and avatar. The user can also add his own card to the DOM, however to delete the cards the user is only able to Delete the cards he added and not the one others users have added. The user can also like others and his own cards",
+    image: Around,
+    tags: ["JavaScript", "Node", "React", "Axios"],
+    source: "https://github.com/enyelsequeira/Social-App",
+    visit: "https://enyelsequeira.github.io/Social-App/",
+    more: "https://enyelsequeira.github.io/gitcardsCase/",
+    id: 2,
+  },
+
+  {
+    title: "Meetup App",
+    description:
+      "MeetUp app was created using AWS lambda. It used React TDD process to create. It uses the external Meetup API to fetch events happening in your city and other places according to what you search. The user can search for specific city to see the events going on in that city. ",
+    image: meetup,
+    tags: ["JavaScript", "Axios", "React", "AWS"],
+    visit: "https://enyelsequeira.github.io/meetup/",
+    source: "https://github.com/enyelsequeira/meetup",
+    more: "https://enyelsequeira.github.io/MeeupCase/",
+    id: 3,
   },
   {
     title: "Pokedex App",
@@ -24,27 +47,5 @@ export const projects = [
     visit: "https://pokedexv4.netlify.app",
     more: "https://enyelsequeira.github.io/PokedexCase/",
     id: 1,
-  },
-  {
-    title: "Github cards",
-    description:
-      "Github cards was created by me with the help of my mentor to better understand how React Hooks work. This allows the user to search for a github username, and then it returns information about that user, Repositories, followers and so on.",
-    image: Around,
-    tags: ["JavaScript", "Node", "React", "Axios"],
-    source: "https://github.com/enyelsequeira/GitCards",
-    visit: "https://enyelsequeira.github.io/GitCards/",
-    more: "https://enyelsequeira.github.io/gitcardsCase/",
-    id: 2,
-  },
-  {
-    title: "Meetup App",
-    description:
-      "MeetUp app was created using AWS lambda. It used React TDD process to create. It uses the external Meetup API to fetch events happening in your city and other places according to what you search. The user can search for specific city to see the events going on in that city. ",
-    image: meetup,
-    tags: ["JavaScript", "Axios", "React", "AWS"],
-    visit: "https://enyelsequeira.github.io/meetup/",
-    source: "https://github.com/enyelsequeira/meetup",
-    more: "https://enyelsequeira.github.io/MeeupCase/",
-    id: 3,
   },
 ]
