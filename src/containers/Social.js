@@ -74,7 +74,11 @@ const SocialContainer = () => {
               </Social.Logo>
             </Social.Cards>
             <Social.Cards>
-              <Social.LinksTitle href="fontendcv2.pdf" download target="_blank">
+              <Social.LinksTitle
+                href={require("../utils/frontendcv2.pdf")}
+                download
+                target="_blank"
+              >
                 Resume
               </Social.LinksTitle>
               <Social.Logo>
