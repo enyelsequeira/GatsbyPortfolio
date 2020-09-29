@@ -12,10 +12,8 @@ export const ContainerSection = styled(Container)`
 
 export const Wrapper = styled(Grid)`
   @media (min-width: 320px) and (max-width: 480px) {
-    border: 1px solid green;
   }
   @media (min-width: 600px) and (max-width: 850px) {
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
   }
