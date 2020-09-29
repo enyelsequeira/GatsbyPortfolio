@@ -4,7 +4,6 @@ export const ContactForm = styled.div`
   width: 100%;
   min-height: 100%;
   padding: 15px;
-  background: #009bff;
   background: ${props => props.theme.colors.background1};
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +13,7 @@ export const ContactForm = styled.div`
 
 export const ContainerContact1 = styled.div`
   width: 1163px;
-  background: #fff;
+  background: ${props => props.theme.colors.background2};
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -77,14 +76,15 @@ export const WrapInput1 = styled.div`
   margin-bottom: 20px;
 `
 export const Input1 = styled.input`
+  text-align: left;
   display: block;
   width: 100%;
   border-radius: 10px;
-  border: 1px solid ${props => props.theme.colors.background1};
-  background: #e6e6e6;
+  border: 2px solid ${props => props.theme.colors.background1};
+  background: ${props => props.theme.colors.background1};
   font-size: 1.3rem;
   line-height: 1.5;
-  color: ${props => props.theme.colors.background1};
+  color: ${props => props.theme.colors.primary1};
 `
 export const ShadowInput = styled.span`
   content: "";
@@ -106,18 +106,24 @@ export const ContainerContact1FormBtn = styled.div`
 export const Contact1FormBtn = styled.button`
   min-width: 193px;
   height: 50px;
-  border-radius: 25px;
-  background: #57b846;
-  font-size: 15px;
+  font-size: 2rem;
   line-height: 1.5;
-  color: #fff;
-
+  background: ${props => props.theme.colors.accent1};
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-
   transition: all 0.4s;
+  border-radius: 0.5rem;
+  border: 0.1rem solid ${props => props.theme.colors.accent1};
+  transition: 250ms;
+  margin-top: 4rem;
+
+  &:hover {
+    box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
+    color: ${props => props.theme.colors.background1};
+    cursor: pointer;
+  }
 `
 export const Title = styled.h1`
   text-align: center;

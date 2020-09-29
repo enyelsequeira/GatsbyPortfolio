@@ -6,6 +6,7 @@ import GitHubIcon from "@material-ui/icons/GitHub"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import MailIcon from "@material-ui/icons/Mail"
+import WorkIcon from "@material-ui/icons/Work"
 
 const SocialContainer = () => {
   return (
@@ -73,9 +74,11 @@ const SocialContainer = () => {
               </Social.Logo>
             </Social.Cards>
             <Social.Cards>
-              <Social.LinksTitle>Mail</Social.LinksTitle>
+              <Social.LinksTitle href="fontendcv2.pdf" download target="_blank">
+                Resume
+              </Social.LinksTitle>
               <Social.Logo>
-                <MailIcon style={{ fontSize: 30 }} />
+                <WorkIcon style={{ fontSize: 30 }} />
               </Social.Logo>
             </Social.Cards>
           </Social.BottomPart>

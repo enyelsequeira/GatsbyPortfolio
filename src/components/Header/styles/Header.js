@@ -95,13 +95,13 @@ export const NavLinks = styled(Link)`
   height: 100%;
   margin: 0 2rem;
   color: ${props => props.theme.colors.primary1};
-  color: ${({ secondary, theme }) =>
-    secondary ? theme.colors.accent1 : theme.colors.primary1};
+  &.active {
+    color: ${({ secondary, theme }) =>
+      secondary ? theme.colors.accent1 : theme.colors.primary1};
+  }
 
   &:hover {
     color: ${props => props.theme.colors.accent1};
-    color: ${({ secondary, theme }) =>
-      secondary ? theme.colors.primary1 : theme.colors.accent1};
   }
   @media screen and (max-width: 960px) {
     text-align: center;

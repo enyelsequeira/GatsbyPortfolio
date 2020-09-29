@@ -16,16 +16,6 @@ import {
   Title,
 } from "./styles/ContactForm"
 
-/// This is to make dynamic
-// const person = {
-//   firstName: "john",
-//   lastName: "doe",
-// }
-
-// const abc = 'lastName'
-
-// console.log(person[abc])
-
 const initialValues = {
   name: "",
   subject: "",
@@ -59,27 +49,6 @@ const Index = props => {
     }
   }
 
-  // function sendEmail(e) {
-  //   e.preventDefault()
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_16pspkp",
-  //       "template_lk4f9zg",
-  //       e.target,
-  //       "user_BZ6TELUu4kYqjUYYqHzta"
-  //     )
-  //     .then(
-  //       result => {
-  //         setValues(initialValues)
-
-  //         console.log(result.text)
-  //       },
-  //       error => {
-  //         console.log(error.text)
-  //       }
-  //     )
-  // }
   return (
     <>
       <Title>Get in Touch</Title>

@@ -11,6 +11,7 @@ import {
 
 export const CardSection = styled.section`
   padding: 2rem 15rem;
+  margin-top: 1rem;
   @media (min-width: 320px) and (max-width: 1586px) {
     padding: 0;
   }
@@ -41,6 +42,7 @@ export const CardContainer = styled(Card)`
   color: ${props => props.theme.colors.primary1};
   box-shadow: 0px 15px 20px rgba(72, 72, 72, 0.1);
   transition: transform 350ms ease;
+  margin: 2rem 0;
 
   &:hover {
     background-color: ${props => props.theme.colors.background1};
@@ -71,8 +73,8 @@ export const ContentTitle = styled.h1`
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
   color: ${props => props.theme.colors.accent1};
   @media (min-width: 320px) and (max-width: 480px) {
     margin: 1rem 0;
@@ -83,7 +85,7 @@ export const ContentTitle = styled.h1`
 `
 export const Info = styled.p`
   width: 100%;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 1rem;
   }

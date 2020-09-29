@@ -71,8 +71,6 @@ export const ListItem = styled(Link)`
   &:hover {
     color: ${props => props.theme.colors.accent1};
   }
-  color: ${({ secondary, theme }) =>
-    secondary ? theme.colors.accent1 : theme.colors.primary1};
 `
 export const Copyright = styled.p`
   text-align: center;
