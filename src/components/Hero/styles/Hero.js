@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Grid } from "@material-ui/core"
 import Img from "gatsby-image"
-import { motion } from "framer-motion"
+import { motion, useViewportScroll } from "framer-motion"
 
 export const HeroSection = styled.section`
   width: 80%;
@@ -45,7 +45,7 @@ export const Title = styled(motion.h2)`
   padding-bottom: 1.2rem;
   color: ${props => props.theme.colors.accent1};
 `
-export const SubTitle = styled.h2`
+export const SubTitle = styled(motion.h2)`
   font-size: 3rem;
   color: ${props => props.theme.colors.primary1};
 `
@@ -73,3 +73,9 @@ export const Picture = styled(Img)`
   display: flex;
   box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.75);
 `
+
+///// test
+
+export const CircleIndicator = () => {
+  const { scrollYProgress } = useViewportScroll()
+}

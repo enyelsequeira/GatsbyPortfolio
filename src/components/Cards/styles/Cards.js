@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import {
   Grid,
   Card,
@@ -97,12 +97,21 @@ export const LinkContainer = styled(CardActions)`
 `
 export const DividerLine = styled(Divider)``
 
+// export const keyFrameExampleOne = keyframes`
+//   0% {
+//     opacity:0;
+//   }
+//   100% {
+//     opacity:1;
+//   }
+// `
 export const Picture = styled.img`
   width: 80%;
   display: flex;
   align-self: center;
   margin: 1rem 0;
   border-radius: 10px;
+  ${"" /* animation: ${keyFrameExampleOne} ease 5s; */}
 `
 
 export const Links = styled.a`

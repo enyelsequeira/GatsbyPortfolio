@@ -19,18 +19,32 @@ const HeroContainer = () => {
       <Hero.Wrapper>
         <Hero.LeftSection>
           <Hero.Title
-            animate={{ rotate: 360 }}
+            initial={{ y: "-100vw" }}
+            animate={{ y: 0 }}
             transition={{
               type: "spring",
               damping: 10,
               mass: 0.75,
-              stiffness: 100,
+              stiffness: 500,
+              duration: 2,
             }}
           >
             Hello, I'm
           </Hero.Title>
-          <Hero.Name>Enyel Sequeira</Hero.Name>
-          <Hero.SubTitle>Full-stack Developer</Hero.SubTitle>
+          <Hero.Name
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 3 }}
+          >
+            Enyel Sequeira
+          </Hero.Name>
+          <Hero.SubTitle
+            initial={{ x: "-100vw" }}
+            animate={{ x: 0 }}
+            transition={{ delay: 1, duration: 1.5 }}
+          >
+            Full-stack Developer
+          </Hero.SubTitle>
         </Hero.LeftSection>
         <Hero.RightSection>
           <Hero.Picture
