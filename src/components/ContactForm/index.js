@@ -14,6 +14,7 @@ import {
   ContainerContact1FormBtn,
   Contact1FormBtn,
   Title,
+  InputTextArea,
 } from "./styles/ContactForm"
 
 const initialValues = {
@@ -98,13 +99,13 @@ const Index = props => {
             </WrapInput1>
 
             <WrapInput1>
-              <Input1
+              <InputTextArea
                 required
                 value={values.message}
                 onChange={handleChange}
                 name="message"
                 placeholder="Message"
-              ></Input1>
+              ></InputTextArea>
               <shadowInput class="shadow-input1"></shadowInput>
             </WrapInput1>
 

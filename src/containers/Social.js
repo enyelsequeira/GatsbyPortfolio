@@ -5,7 +5,6 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import InstagramIcon from "@material-ui/icons/Instagram"
-import MailIcon from "@material-ui/icons/Mail"
 import WorkIcon from "@material-ui/icons/Work"
 
 const SocialContainer = () => {

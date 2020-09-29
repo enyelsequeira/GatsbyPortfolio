@@ -9,6 +9,7 @@ export const ContactForm = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0;
 `
 
 export const ContainerContact1 = styled.div`
@@ -86,6 +87,17 @@ export const Input1 = styled.input`
   line-height: 1.5;
   color: ${props => props.theme.colors.primary1};
 `
+export const InputTextArea = styled.textarea`
+  text-align: left;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid ${props => props.theme.colors.background1};
+  background: ${props => props.theme.colors.background1};
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: ${props => props.theme.colors.primary1};
+`
 export const ShadowInput = styled.span`
   content: "";
   display: block;
@@ -127,6 +139,8 @@ export const Contact1FormBtn = styled.button`
 `
 export const Title = styled.h1`
   text-align: center;
+  margin: 2rem 0;
+
   font-size: 5.5rem;
   color: ${props => props.theme.colors.accent1};
 `
