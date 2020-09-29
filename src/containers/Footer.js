@@ -38,10 +38,15 @@ const FooterContainer = () => {
           <Footer.List>
             <Footer.ListItem to="/">Home</Footer.ListItem>
             <Footer.ListItem to="#About">About</Footer.ListItem>
-            <Footer.ListItem to="#Projects">Projects</Footer.ListItem>
+            <Footer.ListItem to="#Projects" secondary>
+              Projects
+            </Footer.ListItem>
             <Footer.ListItem to="/">Contact</Footer.ListItem>
           </Footer.List>
-          <Footer.Copyright> © Enyel Sequeira</Footer.Copyright>
+          <Footer.Copyright>
+            {" "}
+            Enyel Sequeira © {new Date().getFullYear()}{" "}
+          </Footer.Copyright>
         </Footer.BottomBar>
       </Footer.Wrapper>
     </Footer>

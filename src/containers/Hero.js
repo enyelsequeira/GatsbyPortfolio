@@ -18,7 +18,17 @@ const HeroContainer = () => {
     <Hero>
       <Hero.Wrapper>
         <Hero.LeftSection>
-          <Hero.Title>Hello, I'm</Hero.Title>
+          <Hero.Title
+            animate={{ rotate: 360 }}
+            transition={{
+              type: "spring",
+              damping: 10,
+              mass: 0.75,
+              stiffness: 100,
+            }}
+          >
+            Hello, I'm
+          </Hero.Title>
           <Hero.Name>Enyel Sequeira</Hero.Name>
           <Hero.SubTitle>Full-stack Developer</Hero.SubTitle>
         </Hero.LeftSection>

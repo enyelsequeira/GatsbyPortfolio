@@ -11,6 +11,7 @@ import {
   SubTitle,
   Button,
   Description,
+  BolderCharacter,
 } from "./styles/About"
 
 export default function About({ children, ...restProps }) {
@@ -56,4 +57,8 @@ About.Description = function AboutDescription({ children, ...restProps }) {
 }
 About.Button = function AboutButton({ children, ...restProps }) {
   return <Button {...restProps}>{children}</Button>
+}
+
+About.BolderCharacter = function AboutBolder({ children, ...restProps }) {
+  return <BolderCharacter {...restProps}>{children}</BolderCharacter>
 }

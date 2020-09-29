@@ -12,6 +12,7 @@ import {
   DividerLine,
   Links,
   GridContainer,
+  SectionTittle,
 } from "./styles/Cards"
 
 export default function Card({ children, ...restProps }) {
@@ -25,9 +26,13 @@ Card.Wrapper = function CardWrapper({ children, ...restProps }) {
     </Wrapper>
   )
 }
+
+Card.SectionTittle = function ({ children, ...restProps }) {
+  return <SectionTittle {...restProps}>{children}</SectionTittle>
+}
 Card.GridContainer = function CardGridContainer({ children, ...restProps }) {
   return (
-    <GridContainer item xs={12} sm={8} md={6} {...restProps}>
+    <GridContainer item xs={12} sm={11} md={6} {...restProps}>
       {children}
     </GridContainer>
   )

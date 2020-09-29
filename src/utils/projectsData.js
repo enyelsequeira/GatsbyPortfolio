@@ -1,6 +1,6 @@
 import MovieApp from "../images/movies.png"
 import pokedex from "../images/pokedex.png"
-import Around from "../images/around.png"
+import Around from "../images/social.png"
 import meetup from "../images/meetup.png"
 
 export const projects = [

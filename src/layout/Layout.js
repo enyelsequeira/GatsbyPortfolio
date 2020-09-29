@@ -1,7 +1,8 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import { Header, Footer } from "../components"
+import { Header } from "../components"
+import Footer from "../containers/Footer"
 
 const PageLayout = ({ children }) => {
   const data = useStaticQuery(graphql`

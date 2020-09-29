@@ -10,7 +10,10 @@ import {
 } from "@material-ui/core"
 
 export const CardSection = styled.section`
-  padding: 1rem 1rem;
+  padding: 2rem 15rem;
+  @media (min-width: 320px) and (max-width: 1586px) {
+    padding: 0;
+  }
 `
 
 export const Wrapper = styled(Grid)`
@@ -19,17 +22,21 @@ export const Wrapper = styled(Grid)`
   align-content: center;
 `
 export const GridContainer = styled(Grid)`
-  border: 2px solid red;
   padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 0;
+  }
 `
 
 export const CardContainer = styled(Card)`
-  height: 49rem;
+  height: 60rem;
+  width: 70%;
+  border: 2px solid ${props => props.theme.colors.accent1};
   display: flex;
+  border-radius: 10px;
   flex-direction: column;
-  text-align: center;
-  padding: 1rem 4rem;
-
   background: ${props => props.theme.colors.background1};
   color: ${props => props.theme.colors.primary1};
   box-shadow: 0px 15px 20px rgba(72, 72, 72, 0.1);
@@ -43,7 +50,10 @@ export const CardContainer = styled(Card)`
   }
 
   @media ${props => props.theme.breakpoints.mobile} {
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
+    width: 100%;
+    align-self: center;
+    margin: 1rem 0;
   }
 `
 
@@ -51,54 +61,74 @@ export const ContentInfo = styled(CardContent)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
-  flex: 0 45%;
+  text-align: center;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 1rem;
+  }
 `
 
 export const ContentTitle = styled.h1`
-  font-weight: 500;
-  font-size: 1.8rem;
-  margin-bottom: 4rem;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: ${props => props.theme.colors.accent1};
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin: 1rem 0;
+  }
+  @media (min-width: 950px) and (max-width: 1179px) {
+    margin: 0.5rem 0;
+  }
 `
 export const Info = styled.p`
-  width: 95%;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  width: 100%;
+  font-size: 1.7rem;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 1rem;
+  }
 `
 
 export const LinkContainer = styled(CardActions)`
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 0 10%;
+  justify-content: space-around;
+  margin-top: auto;
 `
 export const DividerLine = styled(Divider)``
 
 export const Picture = styled.img`
-  width: 100%;
-  height: 50%;
+  width: 80%;
   display: flex;
-  justify-content: center;
-  flex: 0 45%;
-
-  & > * {
-    flex-grow: 1;
-  }
+  align-self: center;
+  margin: 1rem 0;
+  border-radius: 10px;
 `
 
 export const Links = styled.a`
   width: 150px;
   font-weight: 900;
   font-size: 1.35rem;
+  text-align: center;
+  border: 1px solid ${props => props.theme.colors.accent1};
+  background: ${props => props.theme.colors.background2};
+  color: ${props => props.theme.colors.accent1};
 
-  background: ${props => props.theme.colors.accent1};
-  color: ${props => props.theme.colors.background1};
   border-radius: 3px;
   padding: 1.1rem;
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.07);
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
+    color: ${props => props.theme.colors.accent1};
   }
+`
+
+export const SectionTittle = styled.h1`
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  margin: 2rem 0;
+  color: ${props => props.theme.colors.accent1};
 `

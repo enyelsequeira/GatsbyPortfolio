@@ -29,14 +29,20 @@ const AboutContainer = () => {
             <About.SubTitle>About me</About.SubTitle>
             <About.Title>Get to know me</About.Title>
             <About.Description>
-              I am a web developer that comes from a teaching and business
-              background. Through my past experiences, I can balance the need of
-              users and businesses to understand their pain points and how I can
-              contribute as a front-end developer and solve their problems.
+              I am a web developer that comes from a teaching and{" "}
+              <About.BolderCharacter>
+                Business background.
+              </About.BolderCharacter>
+              Through my past experiences, I can balance the need of users and
+              businesses to understand their pain points and how I can
+              contribute as a{" "}
+              <About.BolderCharacter>Front-end developer</About.BolderCharacter>{" "}
+              and solve their problems.
             </About.Description>
             <About.Description>
               I've worked with a wide range of people from different backgrounds
-              and demographics. This has enabled me to adapt and become flexible
+              and demographics. This has enabled me to adapt and become{" "}
+              <About.BolderCharacter>flexible</About.BolderCharacter>
               in the workplace.
             </About.Description>
             <About.Button>Find more</About.Button>

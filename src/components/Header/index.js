@@ -69,10 +69,12 @@ function Navbar() {
                 <NavLinks to="#About">About</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="#Projects">Projects</NavLinks>
+                <NavLinks to="#Projects" secondary>
+                  Projects
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/">Contact</NavLinks>
+                <NavLinks to="/contact">Contact</NavLinks>
               </NavItem>
             </NavMenu>
           </NavBarContainer>

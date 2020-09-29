@@ -95,3 +95,6 @@ export const Button = styled(Link)`
     cursor: pointer;
   }
 `
+export const BolderCharacter = styled.span`
+  color: ${props => props.theme.colors.accent1};
+`

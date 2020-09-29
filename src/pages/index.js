@@ -1,7 +1,8 @@
 import React from "react"
 import SEO from "../utils/seo"
 import Layout from "../layout/Layout"
-import { Hero, About, Projects, Social, Footer } from "../containers"
+import { Hero, About, Projects, Social } from "../containers"
+// import ContactForm from "../components/contactForm"
 
 const IndexPage = () => (
   <Layout>
@@ -10,7 +11,7 @@ const IndexPage = () => (
     <About />
     <Projects />
     <Social />
-    <Footer />
+    {/* <ContactForm /> */}
   </Layout>
 )
 
