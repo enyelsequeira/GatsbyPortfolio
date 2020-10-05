@@ -8,10 +8,12 @@ import {
   NavMenu,
   NavLinks,
   NavItem,
+  PageLink,
 } from "./styles/Header"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
 import { useStaticQuery, graphql } from "gatsby"
+import { animateScroll } from "react-scroll"
 
 function Navbar() {
   const data = useStaticQuery(graphql`
@@ -37,6 +39,9 @@ function Navbar() {
       setScroll(false)
     }
   }
+  const toggleHome = () => {
+    animateScroll.scrollToTop()
+  }
 
   useEffect(() => {
     changeNav()
@@ -48,7 +53,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#141414" }}>
         <Nav active={scroll} click={click}>
           <NavBarContainer>
-            <NavLogo to="/">
+            <NavLogo onClick={toggleHome}>
               <NavIcon
                 fluid={data.icon.childImageSharp.fluid}
                 alt="about"
@@ -63,18 +68,34 @@ function Navbar() {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/">Home</NavLinks>
+                <PageLink to="/">Home</PageLink>
               </NavItem>
               <NavItem>
-                <NavLinks to="#About">About</NavLinks>
+                <NavLinks
+                  to="About"
+                  exact="true"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                >
+                  About
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="#Projects" secondary>
+                <NavLinks
+                  to="Projects"
+                  spy={true}
+                  exact="true"
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                >
                   Projects
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/contact">Contact</NavLinks>
+                <PageLink to="/contact">Contact</PageLink>
               </NavItem>
             </NavMenu>
           </NavBarContainer>

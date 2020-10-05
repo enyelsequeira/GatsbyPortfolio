@@ -76,6 +76,6 @@ export const Picture = styled(Img)`
 
 ///// test
 
-export const CircleIndicator = () => {
-  const { scrollYProgress } = useViewportScroll()
-}
+// export const CircleIndicator = () => {
+//   const { scrollYProgress } = useViewportScroll()
+// }

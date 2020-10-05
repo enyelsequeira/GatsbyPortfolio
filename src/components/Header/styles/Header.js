@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link as ReactScroll } from "react-scroll"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 export const Nav = styled.nav`
   background: ${({ active }) =>
@@ -30,7 +31,7 @@ export const NavBarContainer = styled.div`
   max-width: 1000px;
 `
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(ReactScroll)`
   color: #141414;
   justify-self: flex-start;
   cursor: pointer;
@@ -84,7 +85,7 @@ export const NavItem = styled.li`
     width: 100%;
   }
 `
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(ReactScroll)`
   color: #141414;
   display: flex;
   align-items: center;
@@ -95,9 +96,37 @@ export const NavLinks = styled(Link)`
   height: 100%;
   margin: 0 2rem;
   color: ${props => props.theme.colors.primary1};
+
   &.active {
-    color: ${({ secondary, theme }) =>
-      secondary ? theme.colors.accent1 : theme.colors.primary1};
+    border-bottom: 3px solid ${props => props.theme.colors.accent1};
+  }
+
+  &:hover {
+    color: ${props => props.theme.colors.accent1};
+  }
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    color: ${props => props.theme.colors.background1};
+  }
+`
+export const PageLink = styled(Link)`
+  color: #141414;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  height: 100%;
+  margin: 0 2rem;
+  color: ${props => props.theme.colors.primary1};
+
+  &.active {
+    border-bottom: 3px solid ${props => props.theme.colors.accent1};
   }
 
   &:hover {
