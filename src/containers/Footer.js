@@ -38,9 +38,7 @@ const FooterContainer = () => {
           <Footer.List>
             <Footer.ListItem to="/">Home</Footer.ListItem>
             <Footer.ListItem to="#About">About</Footer.ListItem>
-            <Footer.ListItem to="#Projects" secondary>
-              Projects
-            </Footer.ListItem>
+            <Footer.ListItem to="#Projects">Projects</Footer.ListItem>
             <Footer.ListItem to="/contact">Contact</Footer.ListItem>
           </Footer.List>
           <Footer.Copyright>

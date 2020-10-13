@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import {
   Grid,
   Card,
@@ -24,15 +24,16 @@ export const GridContainer = styled(Grid)`
   padding: 10px 15px;
   display: flex;
   justify-content: center;
+
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0;
   }
 `
 
 export const CardContainer = styled(Card)`
-  height: 60rem;
-  width: 70%;
-  border: 2px solid ${props => props.theme.colors.accent1};
+  height: 75rem;
+  width: 80%;
+  border: 1px solid ${props => props.theme.colors.accent1};
   display: flex;
   border-radius: 10px;
   flex-direction: column;
@@ -97,21 +98,12 @@ export const LinkContainer = styled(CardActions)`
 `
 export const DividerLine = styled(Divider)``
 
-// export const keyFrameExampleOne = keyframes`
-//   0% {
-//     opacity:0;
-//   }
-//   100% {
-//     opacity:1;
-//   }
-// `
 export const Picture = styled.img`
   width: 80%;
   display: flex;
   align-self: center;
   margin: 1rem 0;
   border-radius: 10px;
-  ${"" /* animation: ${keyFrameExampleOne} ease 5s; */}
 `
 
 export const Links = styled.a`
@@ -140,4 +132,27 @@ export const SectionTittle = styled.h1`
   letter-spacing: 0.2rem;
   margin: 2rem 0;
   color: ${props => props.theme.colors.accent1};
+  @media ${props => props.theme.breakpoints.mobile} {
+    margin: 0 2rem;
+  }
+  @media ${props => props.theme.breakpoints.tablet} {
+    margin: 0 2rem;
+  }
+`
+export const Tags = styled.h6`
+  font-size: 1.8rem;
+  word-spacing: 0.2rem;
+  margin-top: 2rem;
+  @media ${props => props.theme.breakpoints.mobile} {
+    margin: 0;
+    font-size: 2rem;
+  }
+  @media ${props => props.theme.breakpoints.tablet} {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+  }
+`
+export const Stack = styled.p`
+  color: ${props => props.theme.colors.accent1};
+  font-size: 1.8rem;
 `

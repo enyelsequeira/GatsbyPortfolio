@@ -106,7 +106,7 @@ const Index = props => {
                 name="message"
                 placeholder="Message"
               ></InputTextArea>
-              <shadowInput class="shadow-input1"></shadowInput>
+              <shadowInput></shadowInput>
             </WrapInput1>
 
             <ContainerContact1FormBtn>

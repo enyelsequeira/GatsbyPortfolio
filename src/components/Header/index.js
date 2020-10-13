@@ -53,7 +53,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#141414" }}>
         <Nav active={scroll} click={click}>
           <NavBarContainer>
-            <NavLogo onClick={toggleHome}>
+            <NavLogo to="/" onClick={toggleHome}>
               <NavIcon
                 fluid={data.icon.childImageSharp.fluid}
                 alt="about"

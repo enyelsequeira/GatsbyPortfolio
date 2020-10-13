@@ -29,7 +29,7 @@ Footer.Wrapper = function FooterWrapper({ children, ...restProps }) {
 // Top bar Container with 3 items inside of if
 Footer.TopBar = function FooterTopBar({ children, ...restProps }) {
   return (
-    <TopBar container item={12} {...restProps}>
+    <TopBar container item {...restProps}>
       {children}
     </TopBar>
   )

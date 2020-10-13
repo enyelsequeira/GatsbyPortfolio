@@ -13,6 +13,8 @@ import {
   Links,
   GridContainer,
   SectionTittle,
+  Tags,
+  Stack,
 } from "./styles/Cards"
 
 export default function Card({ children, ...restProps }) {
@@ -61,4 +63,10 @@ Card.Links = function CardLink({ children, ...restProps }) {
 }
 Card.DividerLine = function CardDivider({ children, ...restProps }) {
   return <DividerLine {...restProps}>{children}</DividerLine>
+}
+Card.Tags = function CardTags({ children, ...restProps }) {
+  return <Tags {...restProps}>{children}</Tags>
+}
+Card.Stack = function CardStack({ children, ...restProps }) {
+  return <Stack {...restProps}>{children}</Stack>
 }

@@ -46,16 +46,15 @@ export const BottomPart = styled(Grid)`
 export const Cards = styled(Grid)`
   display: flex;
   justify-content: space-around;
-  border: 2px solid red;
   margin: 0.5rem 2rem;
   box-shadow: inset 0 0 0 2px ${props => props.theme.colors.accent1};
-  box-shadow: inset 0 0 0 2px ${props => props.theme.colors.accent1};
+
   transition: 300ms box-shadow cubic-bezier(0.4, 0, 0.6, 1),
     300ms background-color cubic-bezier(0.4, 0, 0.6, 1),
     300ms color cubic-bezier(0.4, 0, 0.6, 1);
 
   &:hover {
-    box-shadow: inset 0 0 0 4px hsl(243, 80%, 62%);
+    box-shadow: inset 0 0 0 2px hsl(243, 80%, 62%);
     color: ${props => props.theme.colors.background1};
   }
 `
