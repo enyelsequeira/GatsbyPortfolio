@@ -2,6 +2,7 @@ import MovieApp from "../images/movies.png"
 import pokedex from "../images/pokedex.png"
 import Around from "../images/social.png"
 import meetup from "../images/meetup.png"
+import unitech from "../images/unitech.png"
 
 export const projects = [
   {
@@ -13,6 +14,15 @@ export const projects = [
     source: "https://github.com/enyelsequeira/movieshook",
     visit: "https://newmovies.netlify.app/movie",
     id: 0,
+  },{
+    title: "Unitech Pest Control",
+    description: "This was my first real project for a company based in Saint Louis, Missouri. Working with a partner we decided to build this site with the latest technologies out there. We were able to increase the SEO by using tools provided by gatsby. Got a good feedback from the company that they've decided to go with us to build another site for them. Work in progress at the moment",
+
+    image: unitech,
+    tags: ["Gatsby", "Graphql", "StyledComponents", "CompoundComponents"],
+    source: "https://unitechpest.com/",
+    visit: "https://unitechpest.com/",
+    id: 1,
   },
   {
     title: "Around The World",
@@ -46,6 +56,6 @@ export const projects = [
     source: "https://github.com/enyelsequeira/NewPokedex",
     visit: "https://pokedexv4.netlify.app",
     more: "https://enyelsequeira.github.io/PokedexCase/",
-    id: 1,
+    id: 4,
   },
 ]
