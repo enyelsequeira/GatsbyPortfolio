@@ -3,7 +3,7 @@ module.exports = {
     title: `Enyel Sequeira portfolio`,
     description: `Enyel's porfolio to find latest works and news`,
     author: `Enyel Sequeira`,
-    siteUrl: "https://www.fullandstacked.com",
+    siteUrl: "https://enyelsequeira.com/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

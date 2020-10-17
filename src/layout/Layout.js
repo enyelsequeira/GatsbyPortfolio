@@ -10,6 +10,7 @@ const PageLayout = ({ children }) => {
       site {
         siteMetadata {
           title
+            author
         }
       }
     }
@@ -19,7 +20,7 @@ const PageLayout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Footer siteTitle={data.site.siteMetadata.title} />
+      <Footer siteAuthor={data.site.siteMetadata.author} />
     </>
   )
 }

@@ -15,7 +15,7 @@ import { IconContext } from "react-icons/lib"
 import { useStaticQuery, graphql } from "gatsby"
 import { animateScroll } from "react-scroll"
 
-function Navbar() {
+function Navbar({ siteTitle }) {
   const data = useStaticQuery(graphql`
     query {
       icon: file(relativePath: { eq: "icon.jpg" }) {
@@ -56,7 +56,7 @@ function Navbar() {
             <NavLogo to="/" onClick={toggleHome}>
               <NavIcon
                 fluid={data.icon.childImageSharp.fluid}
-                alt="about"
+                alt={siteTitle}
               ></NavIcon>
             </NavLogo>
             <MobileIcon onClick={handleClick}>

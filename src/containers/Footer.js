@@ -3,7 +3,7 @@ import React from "react"
 import Footer from "../components/Footer"
 import { useStaticQuery, graphql } from "gatsby"
 
-const FooterContainer = () => {
+const FooterContainer = ({siteAuthor}) => {
   const data = useStaticQuery(graphql`
     query {
       icon: file(relativePath: { eq: "icon.jpg" }) {
@@ -23,7 +23,7 @@ const FooterContainer = () => {
             <Footer.ListItem to="/">
               <Footer.Icon
                 fluid={data.icon.childImageSharp.fluid}
-                alt="about"
+                alt={siteAuthor}
               ></Footer.Icon>
             </Footer.ListItem>
           </Footer.TopLeft>
@@ -42,8 +42,7 @@ const FooterContainer = () => {
             <Footer.ListItem to="/contact">Contact</Footer.ListItem>
           </Footer.List>
           <Footer.Copyright>
-            {" "}
-            Enyel Sequeira © {new Date().getFullYear()}{" "}
+            ©   {new Date().getFullYear()} | {siteAuthor}
           </Footer.Copyright>
         </Footer.BottomBar>
       </Footer.Wrapper>
