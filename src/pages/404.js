@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import PageLayout from "../layout/Layout"
 import SEO from "../utils/seo"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 import notFound from "../images/notFound.png"
 
@@ -38,26 +38,39 @@ const ReturnBtn = styled(Link)`
   border-radius: 5px;
   margin: 2rem 0;
 `
-const NotFoundImage = styled.img`
+const NotFoundImage = styled(motion.img)`
 border: 1px solid;
 text-align: center;
 margin: 0 auto;
 border-radius: 40px;
 
 `
+const variants = {
+  hidden: { opacity: 0  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 2, type: "tween",
+      delay: 0.5,
+    }
+  }
+}
 
 const NotFoundPage = () => (
-  <PageLayout>
+  <>
     <SEO title="404: Not found" />
     <BlockGroup>
       <LeftBlock>
         <Title>What you doing here??? </Title>
+        <ReturnBtn to="/">Go Home</ReturnBtn>
+
         <Text>Sorry, the page you are looking for doesn't exist</Text>
-        <NotFoundImage src={notFound} alt="NotFoundPage"/>
+        <NotFoundImage  initial="hidden" animate='visible' variants={variants} src={notFound} alt="NotFoundPage"/>
         <ReturnBtn to="/">Go Home</ReturnBtn>
       </LeftBlock>
     </BlockGroup>
-  </PageLayout>
+    </>
 )
 
 export default NotFoundPage
