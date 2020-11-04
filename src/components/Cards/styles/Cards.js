@@ -11,7 +11,7 @@ export const CardSection = styled.section`
   padding: 2rem 15rem;
   margin-top: 1rem;
   @media (min-width: 320px) and (max-width: 1586px) {
-    padding: 0;
+    padding: .2rem;
   }
 `
 
@@ -53,6 +53,7 @@ export const CardContainer = styled(Card)`
   @media ${props => props.theme.breakpoints.mobile} {
     padding: 1rem 0rem;
     width: 100%;
+    height: 80rem;
     align-self: center;
     margin: 1rem 0;
   }
