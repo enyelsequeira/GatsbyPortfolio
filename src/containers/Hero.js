@@ -50,7 +50,7 @@ const HeroContainer = () => {
           <Hero.Picture
             fixed={data.picture.childImageSharp.fixed}
             alt="myself"
-          ></Hero.Picture>
+          />
         </Hero.RightSection>
       </Hero.Wrapper>
     </Hero>

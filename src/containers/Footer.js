@@ -24,7 +24,7 @@ const FooterContainer = ({siteAuthor}) => {
               <Footer.Icon
                 fluid={data.icon.childImageSharp.fluid}
                 alt={siteAuthor}
-              ></Footer.Icon>
+             />
             </Footer.ListItem>
           </Footer.TopLeft>
           <Footer.TopCenter>

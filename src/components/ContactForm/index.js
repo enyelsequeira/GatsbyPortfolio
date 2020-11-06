@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import emailjs from "emailjs-com"
-import letter from "../../images/img-01.png"
+import letter from "../../images/mail.svg"
 import {
   ContactForm,
   ContainerContact1,
@@ -72,7 +72,7 @@ const Index = props => {
                 name="name"
                 placeholder="Name"
               />
-              <ShadowInput></ShadowInput>
+              <ShadowInput/>
             </WrapInput1>
 
             <WrapInput1>

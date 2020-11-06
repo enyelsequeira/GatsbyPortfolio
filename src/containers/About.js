@@ -23,7 +23,7 @@ const AboutContainer = () => {
             <About.Picture
               fluid={data.about.childImageSharp.fluid}
               alt="about"
-            ></About.Picture>
+           />
           </About.LeftSection>
           <About.RightSection>
             <About.SubTitle>About me</About.SubTitle>

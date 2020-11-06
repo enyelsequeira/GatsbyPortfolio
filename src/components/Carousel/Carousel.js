@@ -22,18 +22,22 @@ const Description = styled.p`
 const Carousel = ({ images }) => {
   return (
     <Container infiniteLoop useKeyboardArrows autoPlay>
-      {images.map(({ image, title }) => (
-        <Wrapper key={title}>
-          <img
-            style={{
-              borderRadius: "10px",
-            }}
-            src={image}
-            alt={title}
-          />
-          <Description>{title}</Description>
-        </Wrapper>
-      ))}
+      {images.map(({image, title}) => {
+        console.log(image)
+        return (
+          <Wrapper key={title}>
+            <img
+              style={{
+                borderRadius: "10px",
+              }}
+              src={image}
+              alt={title}
+            />
+            <Description>{title}</Description>
+          </Wrapper>
+        )
+      })}
+
     </Container>
   )
 }

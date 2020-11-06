@@ -47,6 +47,7 @@ export const Contact1Pic = styled.div`
 `
 export const Contact1Picture = styled.img`
   max-width: 100%;
+  
 `
 export const Contact1Form = styled.form`
   width: 390px;
