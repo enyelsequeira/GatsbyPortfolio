@@ -22,12 +22,13 @@ export const Nav = styled.nav`
 `
 
 export const NavBarContainer = styled.div`
+
   display: flex;
   justify-content: space-between;
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1280px;
 `
 
 export const NavLogo = styled(ReactScroll)`
@@ -38,13 +39,15 @@ export const NavLogo = styled(ReactScroll)`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+ 
+  
 `
 export const NavIcon = styled(Img)`
   margin: 1.5rem 0 2rem;
   width: 80px;
   border-radius: 50%;
   @media screen and (max-width: 960px) {
-    margin: 0;
+    margin: 1rem;
     width: 60px;
   }
 `

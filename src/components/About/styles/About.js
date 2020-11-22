@@ -1,36 +1,49 @@
 import styled from "styled-components"
-import { Grid, Container } from "@material-ui/core"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 export const AboutSection = styled.section`
   margin-top: 5rem;
 `
-export const ContainerSection = styled(Container)`
+export const ContainerSection = styled.div`
+
+max-width: 1280px;
+margin: 0 auto;
   background: ${props => props.theme.colors.background2};
 `
 
-export const Wrapper = styled(Grid)`
-  @media (min-width: 320px) and (max-width: 480px) {
+export const Wrapper = styled.div`
+display: flex;
+
+
+  @media (min-width: 320px) and (max-width: 499px) {
+  flex-direction: column;
+  padding: 1rem;
   }
-  @media (min-width: 600px) and (max-width: 850px) {
+  @media (min-width: 500px) and (max-width: 920px) {
     display: flex;
     flex-direction: column;
+      padding: 1rem;
+
   }
 `
 
-export const LeftSection = styled(Grid)`
+export const LeftSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 600px) and (max-width: 850px) {
+  margin-left: 1rem;
+  @media (min-width: 320px) and (max-width: 850px) {
+
     align-self: center;
+    margin: 0;
+    max-width: 100%;
   }
   @media (min-width: 851px) and (max-width: 960px) {
     align-self: center;
   }
 `
-export const RightSection = styled(Grid)`
+export const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
@@ -45,6 +58,7 @@ export const RightSection = styled(Grid)`
 export const Picture = styled(Img)`
   border: 1px solid red;
   width: 500px;
+  max-width: 100%;
   @media (min-width: 320px) and (max-width: 959px) {
     margin-top: 2rem;
   }

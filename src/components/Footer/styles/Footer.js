@@ -3,27 +3,35 @@ import { Grid, Container } from "@material-ui/core"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-export const FooterSection = styled.section``
-
-export const Wrapper = styled(Grid)`
+export const FooterSection = styled.section`
   background: ${props => props.theme.colors.background2};
 `
-
-export const TopBar = styled(Grid)`
-  text-align: center;
+export const Wrapper = styled.div`
+margin: 0 auto;
+max-width: 1280px;
 `
 
-export const TopLeft = styled(Grid)`
+export const TopBar = styled.div`
+display: flex;
+justify-content: space-around;
+text-align: center;
+  @media (min-width: 320px) and (max-width: 700px) {
+  flex-direction: column;
+  }
+
+`
+
+export const TopLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `
-export const TopCenter = styled(Grid)`
+export const TopCenter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `
-export const TopRight = styled(Grid)`
+export const TopRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +60,10 @@ export const Button = styled(Link)`
     margin: 2rem 0;
   }
 `
-export const BottomBar = styled(Container)``
+export const BottomBar = styled.div`
+max-width: 1280px;
+margin: 0 auto;
+`
 export const List = styled.div`
   font-size: 2rem;
   display: flex;

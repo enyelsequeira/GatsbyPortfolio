@@ -1,27 +1,35 @@
 import styled from "styled-components"
-import { Grid } from "@material-ui/core"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
 
 export const HeroSection = styled.section`
-  width: 80%;
+  // padding: 1rem 2rem;
+  // margin: 0 auto;
+  // background: ${props => props.theme.colors.background1};
+  // @media ${props => props.theme.breakpoints.mobile} {
+  //   width: 100%;
+  // }
+  // @media (min-width: 600px) and (max-width: 874px) {
+  //   width: 100%;
+  // }
+`
+
+export const Wrapper = styled.div`
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
   padding: 1rem 2rem;
   margin: 0 auto;
   background: ${props => props.theme.colors.background1};
   @media ${props => props.theme.breakpoints.mobile} {
-    width: 100%;
-  }
-  @media (min-width: 600px) and (max-width: 874px) {
-    width: 100%;
+   flex-direction: column
+  };
+  @media (min-width: 508px) and (max-width: 599px) {
+   flex-direction: column;
   }
 `
 
-export const Wrapper = styled(Grid)`
-  display: flex;
-  justify-content: space-between;
-`
-
-export const LeftSection = styled(Grid)`
+export const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -31,12 +39,15 @@ export const LeftSection = styled(Grid)`
   }
 `
 
-export const RightSection = styled(Grid)`
+export const RightSection = styled.div`
+max-width: 50%;
   display: flex;
   justify-content: center;
-  padding-right: 1rem;
   @media (min-width: 320px) and (max-width: 600px) {
+  max-width: 100%;
+
     text-align: center;
+    margin: 0 auto;
     padding: 0;
   }
 `

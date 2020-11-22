@@ -1,29 +1,18 @@
 import styled from "styled-components"
-import { Grid, Container } from "@material-ui/core"
 
 export const SocialSection = styled.section`
-  width: 80%;
-  padding: 1rem 2rem;
-  height: 100%;
   margin: 5rem auto;
   background: ${props => props.theme.colors.background1};
 
-  @media ${props => props.theme.breakpoints.mobile} {
-    width: 100%;
-    margin: 2rem auto;
-  }
-  @media (min-width: 600px) and (max-width: 874px) {
-    width: 100%;
-    margin: 2rem auto;
-  }
-  @media (min-width: 320px) and (max-width: 599px) {
-    margin: 2rem auto;
-  }
 `
 
-export const Wrapper = styled(Container)``
+export const Wrapper = styled.div`
+max-width: 1280px;
+margin: 0 auto;
+padding: 1rem;
+`
 
-export const GridContainer = styled(Grid)`
+export const GridContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -33,19 +22,24 @@ export const GridContainer = styled(Grid)`
   }
 `
 
-export const TopPart = styled(Grid)``
+export const TopPart = styled.div``
 
-export const BottomPart = styled(Grid)`
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
+export const BottomPart = styled.div`
+max-width: 100%;
+  flex-wrap: wrap;
   margin: 2rem 0;
   padding: 0;
+  display: grid;
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  @media (min-width: 320px) and (max-width: 600px){
+  display: flex;
+  flex-direction: column;
+  }
 `
-export const Cards = styled(Grid)`
+export const Cards = styled.div`
   display: flex;
   justify-content: space-around;
+  
   margin: 0.5rem 2rem;
   box-shadow: inset 0 0 0 2px ${props => props.theme.colors.accent1};
 
@@ -56,7 +50,8 @@ export const Cards = styled(Grid)`
   &:hover {
     box-shadow: inset 0 0 0 2px hsl(243, 80%, 62%);
     color: ${props => props.theme.colors.background1};
-  }
+  };
+  padding: 2rem;
 `
 
 export const Logo = styled.div`
