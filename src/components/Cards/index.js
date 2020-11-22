@@ -4,12 +4,10 @@ import {
   CardSection,
   Wrapper,
   CardContainer,
-  Picture,
   ContentInfo,
   ContentTitle,
   Info,
   LinkContainer,
-  DividerLine,
   Links,
   GridContainer,
   SectionTittle,
@@ -23,7 +21,7 @@ export default function Card({ children, ...restProps }) {
 
 Card.Wrapper = function CardWrapper({ children, ...restProps }) {
   return (
-    <Wrapper container spacing={0} {...restProps}>
+    <Wrapper {...restProps}>
       {children}
     </Wrapper>
   )
@@ -34,7 +32,7 @@ Card.SectionTittle = function ({ children, ...restProps }) {
 }
 Card.GridContainer = function CardGridContainer({ children, ...restProps }) {
   return (
-    <GridContainer item xs={12} sm={11} md={6} {...restProps}>
+    <GridContainer  {...restProps}>
       {children}
     </GridContainer>
   )
@@ -42,9 +40,7 @@ Card.GridContainer = function CardGridContainer({ children, ...restProps }) {
 Card.CardContainer = function CardContainerCard({ children, ...restProps }) {
   return <CardContainer {...restProps}>{children}</CardContainer>
 }
-Card.Picture = function CardPicture({ src, children, ...restProps }) {
-  return <Picture src={src} {...restProps} />
-}
+
 Card.ContentInfo = function CardContentInfo({ children, ...restProps }) {
   return <ContentInfo {...restProps}>{children}</ContentInfo>
 }
@@ -61,9 +57,7 @@ Card.LinkContainer = function CardLinkContainer({ children, ...restProps }) {
 Card.Links = function CardLink({ children, ...restProps }) {
   return <Links {...restProps}>{children}</Links>
 }
-Card.DividerLine = function CardDivider({ children, ...restProps }) {
-  return <DividerLine {...restProps}>{children}</DividerLine>
-}
+
 Card.Tags = function CardTags({ children, ...restProps }) {
   return <Tags {...restProps}>{children}</Tags>
 }

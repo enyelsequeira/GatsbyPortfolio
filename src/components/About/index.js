@@ -30,14 +30,14 @@ About.Wrapper = function AboutWrapper({ children, ...restProps }) {
 
 About.LeftSection = function AboutLeftSection({ children, ...restProps }) {
   return (
-    <LeftSection item xs={12} sm={12} md={6} {...restProps}>
+    <LeftSection  {...restProps}>
       {children}
     </LeftSection>
   )
 }
 About.RightSection = function AboutRightSection({ children, ...restProps }) {
   return (
-    <RightSection item xs={12} sm={12} md={6} {...restProps}>
+    <RightSection {...restProps}>
       {children}
     </RightSection>
   )

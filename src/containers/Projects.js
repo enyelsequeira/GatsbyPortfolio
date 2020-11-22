@@ -8,11 +8,10 @@ const Projects = () => {
   return (
     <Card id="Projects">
       <Fade damping={0.5} duration={4000}>
-        <Card.SectionTittle>My projects</Card.SectionTittle>
         <Card.Wrapper>
+        <Card.SectionTittle>My projects</Card.SectionTittle>
           {projects.map(project => (
-            <Card.GridContainer key={project.id}>
-              <Card.CardContainer>
+              <Card.CardContainer key={project.id}>
                 <Carousel images={project.images} />
                 <Card.ContentTitle>{project.title}</Card.ContentTitle>
                 <Card.ContentInfo>
@@ -31,7 +30,6 @@ const Projects = () => {
                   </Card.Links>
                 </Card.LinkContainer>
               </Card.CardContainer>
-            </Card.GridContainer>
           ))}
         </Card.Wrapper>
       </Fade>

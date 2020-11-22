@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Grid, Container } from "@material-ui/core"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 

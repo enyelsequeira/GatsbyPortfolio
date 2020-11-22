@@ -40,21 +40,21 @@ Footer.BottomBar = function FooterBottomBar({ children, ...restProps }) {
 
 Footer.TopLeft = function FooterTopItems({ children, ...restProps }) {
   return (
-    <TopLeft item xs={12} md={4} {...restProps}>
+    <TopLeft  {...restProps}>
       {children}
     </TopLeft>
   )
 }
 Footer.TopCenter = function FooterCenter({ children, ...restProps }) {
   return (
-    <TopCenter item xs={12} md={4} {...restProps}>
+    <TopCenter {...restProps}>
       {children}
     </TopCenter>
   )
 }
 Footer.TopRight = function FooterRight({ children, ...restProps }) {
   return (
-    <TopRight item xs={12} md={4} {...restProps}>
+    <TopRight  {...restProps}>
       {children}
     </TopRight>
   )

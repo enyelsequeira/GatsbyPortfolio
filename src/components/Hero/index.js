@@ -24,14 +24,14 @@ Hero.Wrapper = function HeroWrapper({ children, ...restProps }) {
 
 Hero.LeftSection = function HeroLeftSection({ children, ...restProps }) {
   return (
-    <LeftSection item xs={12} sm={6} {...restProps}>
+    <LeftSection {...restProps}>
       {children}
     </LeftSection>
   )
 }
 Hero.RightSection = function HeroRightSection({ children, ...restProps }) {
   return (
-    <RightSection item xs={12} sm={6} {...restProps}>
+    <RightSection {...restProps}>
       {children}
     </RightSection>
   )

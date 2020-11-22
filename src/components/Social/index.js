@@ -20,7 +20,7 @@ Social.Wrapper = function SocialWrapper({ children, ...restProps }) {
 }
 Social.GridContainer = function SocialContainer({ children, ...restProps }) {
   return (
-    <GridContainer container spacing={2} {...restProps}>
+    <GridContainer {...restProps}>
       {children}
     </GridContainer>
   )
