@@ -74,7 +74,7 @@ const SocialContainer = () => {
             </Social.Cards>
             <Social.Cards>
               <Social.LinksTitle
-                href={require("../utils/enyel_sequeira.pdf")}
+                href={require("../utils/enyel_sequeira1.pdf")}
                 download
                 target="_blank"
               >
