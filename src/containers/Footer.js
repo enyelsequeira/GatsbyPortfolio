@@ -3,17 +3,17 @@ import React from "react"
 import Footer from "../components/Footer"
 import { useStaticQuery, graphql } from "gatsby"
 
-const FooterContainer = ({siteAuthor}) => {
+const FooterContainer = ({ siteAuthor }) => {
   const data = useStaticQuery(graphql`
-    query {
-      icon: file(relativePath: { eq: "icon.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
+      query {
+          icon: file(relativePath: { eq: "icon.jpg" }) {
+              childImageSharp {
+                  fluid(maxWidth: 100) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
           }
-        }
       }
-    }
   `)
   return (
     <Footer>
@@ -24,7 +24,7 @@ const FooterContainer = ({siteAuthor}) => {
               <Footer.Icon
                 fluid={data.icon.childImageSharp.fluid}
                 alt={siteAuthor}
-             />
+              />
             </Footer.ListItem>
           </Footer.TopLeft>
           <Footer.TopCenter>
@@ -39,13 +39,11 @@ const FooterContainer = ({siteAuthor}) => {
             <Footer.ListItem to="/">Home</Footer.ListItem>
             <Footer.ListItem to="#About">About</Footer.ListItem>
             <Footer.ListItem to="#Projects">Projects</Footer.ListItem>
-            <Footer.ListItem to="/contact">Contact</Footer.ListItem>
-          </Footer.List>
-          <Footer.Copyright>
-            ©   {new Date().getFullYear()} | {siteAuthor}
-          </Footer.Copyright>
-        </Footer.BottomBar>
-      </Footer.Wrapper>
+            <Footer.ListItem
+            to="/contact">Contact</Footer.ListItem>
+          </Footer.List><Footer.Copyright>© {new Date().getFullYear()} | {siteAuthor}
+        </Footer.Copyright>
+        </Footer.BottomBar></Footer.Wrapper>
     </Footer>
   )
 }

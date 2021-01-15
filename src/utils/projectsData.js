@@ -12,9 +12,9 @@ import unitech3 from "../images/unitech3.png"
 
 // Around
 
-import around1 from "../images/around1.png"
-import around2 from "../images/around2.png"
-import around3 from "../images/around3.png"
+import around1 from "../images/news1.png"
+import around2 from "../images/news2.png"
+import around3 from "../images/news3.png"
 
 //Unitech Site 2
 import secondSite1 from "../images/unitechsite2png.png"
@@ -66,17 +66,17 @@ export const projects = [
     id: 3,
   },
   {
-    title: "Around The World",
+    title: "News Explorer",
     description:
-      "Vanilla Javascript Project, based only in using classes to manipulate the dom, manipulate the data being used. In this app the user can update information about himself, from name to profession and avatar. The user can also add his own card to the DOM, however to delete the cards the user is only able to Delete the cards he added and not the one others users have added. The user can also like others and his own cards",
+      "This is a full-stack application, using nodeJs as backend, and React for the front-end. This app allows user to register and it deals with authentication in the backend as well fronted. It allows user to search for latest new and save them to their own profile. The user can also delete the news from saved. This is an ongoing project and will be updated to use best practices in the field and TypeScript.",
     images: [
       { image: around1, title: "Homepage" },
       { image: around2, title: "Editing" },
       { image: around3, title: "Validation" },
     ],
-    tags: ["JavaScript", "Css", "Api", "Validation"],
-    source: "https://github.com/enyelsequeira/Social-App",
-    visit: "https://enyelsequeira.github.io/Social-App/",
+    tags: ["React", "Node", "AWS", "Validation"],
+    source: "https://github.com/enyelsequeira/news-explorer-frontend",
+    visit: "https://news-explorer.vercel.app/",
     id: 2,
   },
 
