@@ -26,9 +26,21 @@ const AboutContainer = () => {
            />
           </About.LeftSection>
           <About.RightSection>
-            <About.SubTitle>About me</About.SubTitle>
-            <About.Title>Get to know me</About.Title>
-            <About.Description>
+            <About.SubTitle
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 3 }}
+            >About me</About.SubTitle>
+            <About.Title
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 3 }}
+            >Get to know me</About.Title>
+            <About.Description
+              initial={{ opacity: 0.1 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 3 }}
+            >
               I am a web developer that comes from a teaching and{" "}
               <About.BolderCharacter>
                 Business background.{" "}
@@ -41,7 +53,11 @@ const AboutContainer = () => {
               </About.BolderCharacter>{" "}
               and solve their problems.
             </About.Description>
-            <About.Description>
+            <About.Description
+              initial={{ opacity: 0.1 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 3 }}
+            >
               I've worked with a wide range of people from different backgrounds
               and demographics. This has enabled me to adapt and become{" "}
               <About.BolderCharacter>flexible </About.BolderCharacter>

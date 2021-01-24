@@ -86,7 +86,7 @@ export const Copyright = styled.p`
   text-align: center;
   font-size: 3rem;
   letter-spacing: 0.5rem;
-  margin: 3rem 0;
+  padding: 2rem 0;
   @media (min-width: 320px) and (max-width: 500px) {
     font-size: 2rem;
   }

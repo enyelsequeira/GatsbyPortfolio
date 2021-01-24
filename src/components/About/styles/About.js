@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 export const AboutSection = styled.section`
   margin-top: 5rem;
@@ -64,18 +65,18 @@ export const Picture = styled(Img)`
   }
 `
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   font-size: 6rem;
   margin: 4rem 0;
 `
-export const SubTitle = styled.p`
-  font-size: 2rem;
+export const SubTitle = styled(motion.p)`
+  font-size: 4rem;
   margin-top: 2rem;
   color: ${props => props.theme.colors.accent1};
   font-weight: bolder;
   letter-spacing: 0.2rem;
 `
-export const Description = styled.p`
+export const Description = styled(motion.p)`
   font-size: 2.3rem;
   margin-bottom: 3.2rem;
   line-height: 30px;

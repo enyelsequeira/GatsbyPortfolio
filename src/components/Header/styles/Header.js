@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-
+  padding: 4rem 0;
   @media screen and(max-width) {
     background: ${({ click }) => (click ? "#fff" : "transparent")};
     transition: 0.8s all ease;
@@ -39,13 +39,15 @@ export const NavLogo = styled(ReactScroll)`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
- 
-  
+
+
+
 `
 export const NavIcon = styled(Img)`
   margin: 1.5rem 0 2rem;
   width: 80px;
   border-radius: 50%;
+  
   @media screen and (max-width: 960px) {
     margin: 1rem;
     width: 60px;

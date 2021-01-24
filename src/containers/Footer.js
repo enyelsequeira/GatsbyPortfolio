@@ -28,7 +28,7 @@ const FooterContainer = ({ siteAuthor }) => {
             </Footer.ListItem>
           </Footer.TopLeft>
           <Footer.TopCenter>
-            <Footer.TitleCenter>Let's Talk?</Footer.TitleCenter>
+            <Footer.TitleCenter>Let's Talk</Footer.TitleCenter>
           </Footer.TopCenter>
           <Footer.TopRight>
             <Footer.Button to="/contact">Let's chat</Footer.Button>

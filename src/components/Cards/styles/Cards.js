@@ -106,6 +106,7 @@ export const LinkContainer = styled.div`
    align-items: center;
    justify-content: space-around;
    margin-top: auto;
+  margin-bottom: 1rem;
 `
 export const Links = styled.a`
   width: fit-content;
