@@ -21,21 +21,32 @@ import secondSite1 from "../images/unitechsite2png.png"
 import secondSite2 from "../images/unitechsite21.png"
 import secondSite3 from "../images/unitechsite23.png"
 
+// Iterative project
+import iterative1 from "../images/iterative1.png"
+import iterative2 from "../images/iterative2.png"
+import iterative3 from "../images/iterative3.png"
+
+
 export const projects = [
   {
-    title: "Movie App",
+    title: "Iterative.AI",
     description:
-      "This app is a ReactJs application, using the latest technologies, such as hooks, scss modules to style and the most important using AI, I've integrated AI to be able to ask a few simple question, from what does this app do? to others, you can check out the repo for more. The data being used in this app is from TMDB database and the user can see all the information related to each specific movie",
+      "Iterative.ai, a data science and machine learning version control platform, came to us wanting a new static landing page built with Gatsby.\n" +
+      "\n" +
+      "With two other developers we were able to develop and ship this site in about 3 weeks. We organized tasks on Trello and collaborated via Github to pull all the components together.\n" +
+      "\n" +
+      "We decided to use Styled Components as this design framework pairs nicely with Gatsby.",
     images: [
-      { image: movie1, title: "Homepage" },
-      { image: movie2, title: "Dark Mode" },
-      { image: movie3, title: "Page Details" },
+      { image: iterative1, title: "Homepage" },
+      { image: iterative2, title: "About" },
+      { image: iterative3, title: "Details" },
     ],
-    tags: ["React", "Redux", "Router", "Scss"],
-    source: "https://github.com/enyelsequeira/movieshook",
-    visit: "https://newmovies.netlify.app/movie",
+    tags: ["React", "Gatsby", "StyledComponents"],
+    source: "https://iterative.ai",
+    visit: "https://iterative.ai",
     id: 0,
   },
+
   {
     title: "Unitech Pest Control",
     description:
@@ -49,7 +60,7 @@ export const projects = [
     tags: ["Gatsby", "Graphql", "StyledComponents", "Material"],
     source: "https://unitechpest.com/",
     visit: "https://unitechpest.com/",
-    id: 1,
+    id: 2,
   },
   {
     title: "Unitech Pest Control",
@@ -66,6 +77,20 @@ export const projects = [
     id: 3,
   },
   {
+    title: "Movie App",
+    description:
+      "This app is a ReactJs application, using the latest technologies, such as hooks, scss modules to style and the most important using AI, I've integrated AI to be able to ask a few simple question, from what does this app do? to others, you can check out the repo for more. The data being used in this app is from TMDB database and the user can see all the information related to each specific movie",
+    images: [
+      { image: movie1, title: "Homepage" },
+      { image: movie2, title: "Dark Mode" },
+      { image: movie3, title: "Page Details" },
+    ],
+    tags: ["React", "Redux", "Router", "Scss"],
+    source: "https://github.com/enyelsequeira/movieshook",
+    visit: "https://newmovies.netlify.app/movie",
+    id: 1,
+  },
+  {
     title: "News Explorer",
     description:
       "This is a full-stack application, using nodeJs as backend, and React for the front-end. This app allows user to register and it deals with authentication in the backend as well fronted. It allows user to search for latest new and save them to their own profile. The user can also delete the news from saved. This is an ongoing project and will be updated to use best practices in the field and TypeScript.",
@@ -77,7 +102,7 @@ export const projects = [
     tags: ["React", "Node", "AWS", "Validation"],
     source: "https://github.com/enyelsequeira/news-explorer-frontend",
     visit: "https://news-explorer.vercel.app/",
-    id: 2,
+    id: 4,
   },
 
 
