@@ -1,9 +1,9 @@
 {
-  "name": "My Gatsby Portfolio",
+  "name": "My-Gatsby-Portfolio",
   "private": true,
   "description": "A Gatsby Portfolio where you can find information about me",
   "version": "0.1.0",
-  "author": "Enyel Sequeira <enyelsequeira1994@gmail.com>",
+  "author": "Enyel-Sequeira <enyelsequeira1994@gmail.com>",
   "dependencies": {
     "@emotion/styled": "^10.0.27",
     "@material-ui/core": "^4.11.0",
