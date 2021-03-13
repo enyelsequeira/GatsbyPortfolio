@@ -7,7 +7,7 @@ const AboutContainer = () => {
   const data = useStaticQuery(graphql`{
   about: file(relativePath: {eq: "aboutme.png"}) {
     childImageSharp {
-      gatsbyImageData(layout: CONSTRAINED, formats: AVIF, placeholder: BLURRED, backgroundColor: "#264653")
+      gatsbyImageData(layout: CONSTRAINED,  formats:{["auto", "WEBP", "AVIF"]}, placeholder: BLURRED, backgroundColor: "#264653")
     }
   }
 }
