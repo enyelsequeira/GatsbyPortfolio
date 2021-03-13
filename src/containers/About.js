@@ -7,7 +7,7 @@ const AboutContainer = () => {
   const data = useStaticQuery(graphql`{
   about: file(relativePath: {eq: "aboutme.png"}) {
     childImageSharp {
-      gatsbyImageData(layout: CONSTRAINED,  formats:{["auto", "WEBP", "AVIF"]}, placeholder: BLURRED, backgroundColor: "#264653")
+      gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, backgroundColor: "#264653")
     }
   }
 }
@@ -22,8 +22,7 @@ const AboutContainer = () => {
             width="100%"
           height="100%"
           formats={["auto", "WEBP", "AVIF"]}
-          placeholder="blurred"
-          backgroundColor="#264653"
+       
           alt="Hero-image"
            />
           </About.LeftSection>

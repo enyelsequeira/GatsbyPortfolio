@@ -6,7 +6,7 @@ const HeroContainer = () => {
   const data = useStaticQuery(graphql`{
   file(relativePath: {eq: "workpic.png"}) {
     childImageSharp {
-      gatsbyImageData( layout: CONSTRAINED, formats:{["auto", "WEBP", "AVIF"]}, placeholder: BLURRED, backgroundColor: "#264653" )
+      gatsbyImageData( layout: CONSTRAINED,  placeholder: BLURRED, backgroundColor: "#264653" )
     }
   }
 }
@@ -49,6 +49,7 @@ const HeroContainer = () => {
             width="100%"
           height="100%"
           alt="Hero-image"
+          formats={["auto", "WEBP", "AVIF"]}
           />
         </Hero.RightSection>
       </Hero.Wrapper>
