@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby"
 
 export const FooterSection = styled.section`
@@ -35,7 +35,7 @@ export const TopRight = styled.div`
   align-items: center;
   justify-content: center;
 `
-export const Icon = styled(Img)`
+export const Icon = styled(GatsbyImage)`
   width: 80px;
   border-radius: 50%;
   @media (min-width: 320px) and (max-width: 959px) {

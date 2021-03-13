@@ -16,17 +16,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import { animateScroll } from "react-scroll"
 
 function Navbar({ siteTitle }) {
-  const data = useStaticQuery(graphql`
-    query {
-      icon: file(relativePath: { eq: "icon.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  icon: file(relativePath: {eq: "icon.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 100, layout: CONSTRAINED)
     }
-  `)
+  }
+}
+`)
   const [click, setClick] = useState(false)
   const [scroll, setScroll] = useState(false)
 
@@ -48,61 +45,59 @@ function Navbar({ siteTitle }) {
     window.addEventListener("scroll", changeNav)
   }, [])
 
-  return (
-    <>
-      <IconContext.Provider value={{ color: "#141414" }}>
-        <Nav active={scroll} click={click}>
-          <NavBarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
-              <NavIcon
-                fluid={data.icon.childImageSharp.fluid}
-                alt={siteTitle}
-              ></NavIcon>
-            </NavLogo>
-            <MobileIcon onClick={handleClick}>
-              {click ? (
-                <FaTimes color="hsl(34.9,98.6%,72.9%)" />
-              ) : (
-                <FaBars color="hsl(34.9,98.6%,72.9%)" />
-              )}
-            </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
-              <NavItem>
-                <PageLink to="/">Home</PageLink>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="About"
-                  exact="true"
-                  spy={true}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                >
-                  About
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="Projects"
-                  spy={true}
-                  exact="true"
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                >
-                  Projects
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <PageLink to="/contact">Contact</PageLink>
-              </NavItem>
-            </NavMenu>
-          </NavBarContainer>
-        </Nav>
-      </IconContext.Provider>
-    </>
-  )
+  return <>
+    <IconContext.Provider value={{ color: "#141414" }}>
+      <Nav active={scroll} click={click}>
+        <NavBarContainer>
+          <NavLogo to="/" onClick={toggleHome}>
+            <NavIcon
+              fluid={data.icon.childImageSharp.gatsbyImageData}
+              alt={siteTitle}
+            ></NavIcon>
+          </NavLogo>
+          <MobileIcon onClick={handleClick}>
+            {click ? (
+              <FaTimes color="hsl(34.9,98.6%,72.9%)" />
+            ) : (
+              <FaBars color="hsl(34.9,98.6%,72.9%)" />
+            )}
+          </MobileIcon>
+          <NavMenu onClick={handleClick} click={click}>
+            <NavItem>
+              <PageLink to="/">Home</PageLink>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="About"
+                exact="true"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                About
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="Projects"
+                spy={true}
+                exact="true"
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                Projects
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <PageLink to="/contact">Contact</PageLink>
+            </NavItem>
+          </NavMenu>
+        </NavBarContainer>
+      </Nav>
+    </IconContext.Provider>
+  </>;
 }
 
 export default Navbar

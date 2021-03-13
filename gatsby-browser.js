@@ -33,4 +33,3 @@ export const wrapRootElement = ({ element }) => (
     {element}
   </ThemeProvider>
 )
-// test

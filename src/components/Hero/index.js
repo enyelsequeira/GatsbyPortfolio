@@ -1,13 +1,20 @@
 import React from "react"
 import {
-  Wrapper,
   HeroSection,
+
+
+
+
+
+
   LeftSection,
-  RightSection,
-  Title,
-  SubTitle,
+
+
+
   Name,
-  Picture,
+  Picture, RightSection,
+
+  SubTitle, Title, Wrapper
 } from "./styles/Hero"
 
 export default function Hero({ children, ...restProps }) {

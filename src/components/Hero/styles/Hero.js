@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import Img from "gatsby-image"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { GatsbyImage } from 'gatsby-plugin-image';
+import styled from "styled-components";
 
 export const HeroSection = styled.section`
   // padding: 1rem 2rem;
@@ -51,6 +51,17 @@ max-width: 50%;
     padding: 0;
   }
 `
+
+
+export const Picture = styled(GatsbyImage)`
+  border-radius: 40px;
+  max-width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.75);
+`
+
+
 export const Title = styled(motion.h2)`
   font-size: 5rem;
   padding-bottom: 1.2rem;
@@ -77,10 +88,4 @@ export const Name = styled(motion.h1)`
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 6rem;
   }
-`
-export const Picture = styled(Img)`
-  border-radius: 40px;
-  margin-top: 1rem;
-  display: flex;
-  box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.75);
 `

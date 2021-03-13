@@ -4,17 +4,14 @@ import Footer from "../components/Footer"
 import { useStaticQuery, graphql } from "gatsby"
 
 const FooterContainer = ({ siteAuthor }) => {
-  const data = useStaticQuery(graphql`
-      query {
-          icon: file(relativePath: { eq: "icon.jpg" }) {
-              childImageSharp {
-                  fluid(maxWidth: 100) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-          }
-      }
-  `)
+  const data = useStaticQuery(graphql`{
+  icon: file(relativePath: {eq: "icon.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 100, layout: CONSTRAINED)
+    }
+  }
+}
+`)
   return (
     <Footer>
       <Footer.Wrapper>
@@ -22,7 +19,7 @@ const FooterContainer = ({ siteAuthor }) => {
           <Footer.TopLeft>
             <Footer.ListItem to="/">
               <Footer.Icon
-                fluid={data.icon.childImageSharp.fluid}
+                fluid={data.icon.childImageSharp.gatsbyImageData}
                 alt={siteAuthor}
               />
             </Footer.ListItem>
@@ -45,7 +42,7 @@ const FooterContainer = ({ siteAuthor }) => {
         </Footer.Copyright>
         </Footer.BottomBar></Footer.Wrapper>
     </Footer>
-  )
+  );
 }
 
 export default FooterContainer

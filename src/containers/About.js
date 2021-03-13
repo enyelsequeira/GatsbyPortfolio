@@ -1,28 +1,30 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-
 import About from "../components/About"
-import { useStaticQuery, graphql } from "gatsby"
+
 
 const AboutContainer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      about: file(relativePath: { eq: "aboutme.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  about: file(relativePath: {eq: "aboutme.png"}) {
+    childImageSharp {
+      gatsbyImageData( layout: CONSTRAINED)
     }
-  `)
+  }
+}
+`)
   return (
     <About id="About">
       <About.ContainerSection>
         <About.Wrapper>
           <About.LeftSection>
             <About.Picture
-              fluid={data.about.childImageSharp.fluid}
-              alt="about"
+           image={data.about.childImageSharp.gatsbyImageData}
+            width="100%"
+          height="100%"
+          formats={["auto", "WEBP", "AVIF"]}
+          placeholder="blurred"
+          backgroundColor="#264653"
+          alt="Hero-image"
            />
           </About.LeftSection>
           <About.RightSection>
@@ -68,7 +70,7 @@ const AboutContainer = () => {
         </About.Wrapper>
       </About.ContainerSection>
     </About>
-  )
+  );
 }
 
 export default AboutContainer

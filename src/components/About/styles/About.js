@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import Img from "gatsby-image"
-import { Link } from "gatsby"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
 export const AboutSection = styled.section`
   margin-top: 5rem;
@@ -56,8 +56,8 @@ export const RightSection = styled.div`
     padding: 0;
   }
 `
-export const Picture = styled(Img)`
-  border: 1px solid red;
+export const Picture = styled(GatsbyImage)`
+border-radius: 10px;
   width: 500px;
   max-width: 100%;
   @media (min-width: 320px) and (max-width: 959px) {

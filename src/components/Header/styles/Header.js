@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link as ReactScroll } from "react-scroll"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby"
 
 export const Nav = styled.nav`
@@ -43,7 +43,7 @@ export const NavLogo = styled(ReactScroll)`
 
 
 `
-export const NavIcon = styled(Img)`
+export const NavIcon = styled(GatsbyImage)`
   margin: 1.5rem 0 2rem;
   width: 80px;
   border-radius: 50%;

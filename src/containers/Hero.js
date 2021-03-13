@@ -1,19 +1,16 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Hero from "../components/Hero"
-import { useStaticQuery, graphql } from "gatsby"
 
 const HeroContainer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      picture: file(relativePath: { eq: "workpic.png" }) {
-        childImageSharp {
-          fixed(width: 600) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  file(relativePath: {eq: "workpic.png"}) {
+    childImageSharp {
+      gatsbyImageData( layout: CONSTRAINED)
     }
-  `)
+  }
+}
+`)
   return (
     <Hero>
       <Hero.Wrapper>
@@ -48,13 +45,18 @@ const HeroContainer = () => {
         </Hero.LeftSection>
         <Hero.RightSection>
           <Hero.Picture
-            fixed={data.picture.childImageSharp.fixed}
-            alt="myself"
+            image={data.file.childImageSharp.gatsbyImageData}
+            width="100%"
+          height="100%"
+          formats={["auto", "WEBP", "AVIF"]}
+          placeholder="blurred"
+          backgroundColor="#264653"
+          alt="Hero-image"
           />
         </Hero.RightSection>
       </Hero.Wrapper>
     </Hero>
-  )
+  );
 }
 
 export default HeroContainer
