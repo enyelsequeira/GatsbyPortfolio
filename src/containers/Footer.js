@@ -1,13 +1,13 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-
 import Footer from "../components/Footer"
-import { useStaticQuery, graphql } from "gatsby"
+
 
 const FooterContainer = ({ siteAuthor }) => {
   const data = useStaticQuery(graphql`{
   icon: file(relativePath: {eq: "icon.jpg"}) {
     childImageSharp {
-      gatsbyImageData(width: 100, layout: CONSTRAINED)
+      gatsbyImageData( layout: CONSTRAINED,  placeholder: BLURRED, backgroundColor: "#264653")
     }
   }
 }
@@ -19,8 +19,12 @@ const FooterContainer = ({ siteAuthor }) => {
           <Footer.TopLeft>
             <Footer.ListItem to="/">
               <Footer.Icon
-                fluid={data.icon.childImageSharp.gatsbyImageData}
+                image={data.icon.childImageSharp.gatsbyImageData}
+                formats={["auto", "WEBP", "AVIF"]}
                 alt={siteAuthor}
+                width="100%"
+          height="100%"
+      
               />
             </Footer.ListItem>
           </Footer.TopLeft>

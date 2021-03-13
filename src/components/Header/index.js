@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from "react"
-import {
-  Nav,
-  NavBarContainer,
-  NavLogo,
-  NavIcon,
-  MobileIcon,
-  NavMenu,
-  NavLinks,
-  NavItem,
-  PageLink,
-} from "./styles/Header"
+import { graphql, useStaticQuery } from "gatsby"
+import React, { useEffect, useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
-import { useStaticQuery, graphql } from "gatsby"
 import { animateScroll } from "react-scroll"
+import {
+  MobileIcon, Nav,
+  NavBarContainer,
+
+  NavIcon,
+
+
+
+  NavItem, NavLinks, NavLogo,
+
+
+  NavMenu,
+
+
+  PageLink
+} from "./styles/Header"
 
 function Navbar({ siteTitle }) {
   const data = useStaticQuery(graphql`{
   icon: file(relativePath: {eq: "icon.jpg"}) {
     childImageSharp {
-      gatsbyImageData(width: 100, layout: CONSTRAINED)
+      gatsbyImageData( layout: CONSTRAINED,  placeholder: BLURRED, backgroundColor: "#264653" )
     }
   }
 }
@@ -51,8 +56,9 @@ function Navbar({ siteTitle }) {
         <NavBarContainer>
           <NavLogo to="/" onClick={toggleHome}>
             <NavIcon
-              fluid={data.icon.childImageSharp.gatsbyImageData}
+              image={data.icon.childImageSharp.gatsbyImageData}
               alt={siteTitle}
+              formats={["auto", "WEBP", "AVIF"]}
             ></NavIcon>
           </NavLogo>
           <MobileIcon onClick={handleClick}>

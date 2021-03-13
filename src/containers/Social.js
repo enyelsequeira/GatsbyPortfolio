@@ -20,6 +20,7 @@ const SocialContainer = () => {
             <Social.Cards>
               <Social.LinksTitle
                 target="_blank"
+                rel="noopener"
                 href="https://twitter.com/enyelsequeira?lang=en"
               >
                 Twitter
@@ -31,6 +32,7 @@ const SocialContainer = () => {
             <Social.Cards>
               <Social.LinksTitle
                 target="_blank"
+                rel="noopener"
                 href="https://www.facebook.com/enyel.sequeira/"
               >
                 Facebook
@@ -42,6 +44,7 @@ const SocialContainer = () => {
             <Social.Cards>
               <Social.LinksTitle
                 target="_blank"
+                rel="noopener"
                 href="https://www.instagram.com/e.s.codes/?hl=en"
               >
                 Instagram
@@ -53,6 +56,7 @@ const SocialContainer = () => {
             <Social.Cards>
               <Social.LinksTitle
                 target="_blank"
+                rel="noopener"
                 href="https://github.com/enyelsequeira"
               >
                 Github
@@ -64,6 +68,7 @@ const SocialContainer = () => {
             <Social.Cards>
               <Social.LinksTitle
                 target="_blank"
+                rel="noopener"
                 href="https://www.linkedin.com/in/enyel-sequeira-333a60100/"
               >
                 LinkedIn

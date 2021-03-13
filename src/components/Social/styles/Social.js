@@ -72,7 +72,7 @@ export const Title = styled.p`
   margin: 1rem 0;
 `
 
-export const SubTitle = styled.h6`
+export const SubTitle = styled.p`
   font-size: 4rem;
   margin: 2rem 0;
 `

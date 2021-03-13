@@ -1,6 +1,6 @@
 import React from "react"
-import Card from "../components/Cards"
 import { Fade } from "react-awesome-reveal"
+import Card from "../components/Cards"
 import Carousel from "../components/Carousel/Carousel"
 import { projects } from "../utils/projectsData"
 
@@ -22,10 +22,10 @@ const Projects = () => {
                   </Card.Tags>
                 </Card.ContentInfo>
                 <Card.LinkContainer>
-                  <Card.Links target="_blank" href={project.source}>
+                  <Card.Links target="_blank" rel="noopener" href={project.source}>
                     Source
                   </Card.Links>
-                  <Card.Links target="_blank" href={project.visit}>
+                  <Card.Links target="_blank" rel="noopener" href={project.visit}>
                     Visit
                   </Card.Links>
                 </Card.LinkContainer>
