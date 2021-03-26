@@ -1,6 +1,10 @@
 //Movies
 
 // Iterative project
+//blog
+import blog1 from "../images/blog1.png"
+import blog2 from "../images/blog2.png"
+import blog3 from "../images/blog3.png"
 import iterative1 from "../images/iterative1.png"
 import iterative2 from "../images/iterative2.png"
 import iterative3 from "../images/iterative3.png"
@@ -37,21 +41,7 @@ export const projects = [
     id: 0,
   },
 
-  // {
-  //   title: "Unitech Pest Control",
-  //   description:
-  //     "This was my first real project/client for a pest control company based in Saint Louis, Missouri. Working with a partner we decided to build this site with the latest technologies out there. We were able to increase the SEO by using tools provided by gatsby. Got a good feedback from the company that they've decided to go with us to build another site for them. Work in progress at the moment",
 
-  //   images: [
-  //     { image: unitech1, title: "Homepage" },
-  //     { image: unitech2, title: "Calendar" },
-  //     { image: unitech3, title: "Booking" },
-  //   ],
-  //   tags: ["Gatsby", "Graphql", "StyledComponents", "Material"],
-  //   source: "https://unitechpest.com/",
-  //   visit: "https://unitechpest.com/",
-  //   id: 2,
-  // },
   // {
   //   title: "Unitech Pest Control",
   //   description:
@@ -79,6 +69,19 @@ export const projects = [
     source: "https://github.com/enyelsequeira/movieshook",
     visit: "https://newmovies.netlify.app/movie",
     id: 1,
+  },
+  {
+    title: "Personal Blog",
+    description:"This is my personal blog, I've built this after being asked to do a live-coding webinar for Practicum By Yandex bootcamp. I Decided to use latest the JAM stack to teach the students latest trends in web development. Using Gatsby and for the content management system using Contentful. This is still in process project. Features to be added shortly.",
+    images: [
+      { image: blog1, title: "Homepage" },
+      { image: blog2, title: "About" },
+      { image: blog3, title: "Message" },
+    ],
+    tags: ["Gatsby", "Graphql", "StyledComponents", "Material"],
+    source: "https://unitechpest.com/",
+    visit: "https://unitechpest.com/",
+    id: 2,
   },
   {
     title: "News Explorer",
