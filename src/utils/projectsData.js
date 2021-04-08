@@ -72,7 +72,7 @@ export const projects = [
   },
   {
     title: "Personal Blog",
-    description:"This is my personal blog, I've built this after being asked to do a live-coding webinar for Practicum By Yandex bootcamp. I Decided to use latest stack the JAM stack to teach the students latest trends in web development. Using Next and for the content management system using Contentful. The project uses MDX to render markdown language for each and also fetches information from contentful.",
+    description:"This is my personal blog, I've built this after being asked to do a live-coding webinar for Practicum By Yandex bootcamp. I Decided to use latest stack the JAM stack to teach the students latest trends in web development. Using Next and for the content management system using Contentful. The project uses MDX to render markdown language for each post and also fetches information from contentful.",
     images: [
       { image: blog1, title: "Homepage" },
       { image: blog2, title: "About" },
