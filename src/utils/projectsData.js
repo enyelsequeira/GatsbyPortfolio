@@ -72,15 +72,15 @@ export const projects = [
   },
   {
     title: "Personal Blog",
-    description:"This is my personal blog, I've built this after being asked to do a live-coding webinar for Practicum By Yandex bootcamp. I Decided to use latest stack the JAM stack to teach the students latest trends in web development. Using Gatsby and for the content management system using Contentful. This is still in process project. Features to be added shortly.",
+    description:"This is my personal blog, I've built this after being asked to do a live-coding webinar for Practicum By Yandex bootcamp. I Decided to use latest stack the JAM stack to teach the students latest trends in web development. Using Next and for the content management system using Contentful. The project uses MDX to render markdown language for each and also fetches information from contentful.",
     images: [
       { image: blog1, title: "Homepage" },
       { image: blog2, title: "About" },
       { image: blog3, title: "Message" },
     ],
-    tags: ["Gatsby", "Graphql", "StyledComponents", "Material"],
-    source: "https://unitechpest.com/",
-    visit: "https://unitechpest.com/",
+    tags: ["GraphQl", "MDX", "NextJs", "TypeScript"],
+    source: "https://github.com/enyelsequeira/next-tailwind-blog",
+    visit: "https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/",
     id: 2,
   },
   {
